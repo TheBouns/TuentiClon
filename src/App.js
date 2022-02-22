@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Loggin from './components/loggin/loggin';
+// import Loggin from './components/loggin/loggin';
+import Header from './components/header/Header';
 
 function App() {
   return (
     <div>
-      <Loggin/>
+      {/* <Loggin/> */}
+      <Header/>
     </div>
   )
 }

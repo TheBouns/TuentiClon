@@ -36,16 +36,16 @@ const Loggin = ()=>{
                     <div className='description'>
                         <span>
                             <h3>Social</h3>
-                            <p>Conect,share and communicate with friends,partners and family
+                            <p>Conect,share and communicate with friends,partners and family.
                             </p>
                         </span>
                         <span>
                             <h3>Local</h3>
-                            <p>Discover local services and engage with the brands you really care about</p>
+                            <p>Discover local services and engage with the brands you really care about.</p>
                         </span>
                         <span>
                             <h3>Smartphone</h3>
-                            <p>Get Tuenti in your Smartphone</p>
+                            <p>Get Tuenti in your Smartphone.</p>
                         </span>
                     </div>
                 </div>
