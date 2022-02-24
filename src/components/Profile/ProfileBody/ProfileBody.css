@@ -57,3 +57,38 @@
   color: #5f7e9a;
   cursor: pointer;
 }
+.comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.commentsInfo {
+  margin-top: 0.5em;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5em;
+}
+.commentsInfo img {
+  width: 5em;
+  max-height: 6em;
+}
+.userComment {
+  color: #146ab1;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+}
+.date {
+  font-size: 0.9em;
+}
+.commentBody {
+  width: 100%;
+  min-height: 7em;
+  max-height: 7em;
+  margin-top: 0.5em;
+  background-color: #f0f5f9;
+}
+.like {
+  align-self: flex-end;
+  margin-top: 0.5em;
+}
