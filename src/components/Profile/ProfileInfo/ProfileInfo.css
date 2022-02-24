@@ -1,0 +1,47 @@
+#infoContainer {
+  width: 15%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5em;
+  gap: 1em;
+  position: relative;
+}
+.imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgBio {
+  width: 100%;
+  width: 100%;
+}
+#conections {
+  width: 100%;
+  background-color: #f0f5f9;
+}
+#info {
+  width: 100%;
+  background-color: #f0f5f9;
+}
+#information {
+  display: flex;
+}
+.titleAnswer {
+  width: 30%;
+}
+.answer {
+  width: 70%;
+  justify-content: flex-start;
+  margin-left: 2em;
+}
+.profileInfoTitle {
+  width: 100%;
+  background-color: #d3e4f4;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 0.5em;
+}

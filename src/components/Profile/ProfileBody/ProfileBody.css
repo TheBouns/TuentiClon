@@ -1,0 +1,59 @@
+#profileBody {
+  width: 60%;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+}
+#profileButtons {
+  margin-bottom: 1em;
+}
+#profileButtons button {
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+.profileBodyTitle {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d3e4f4;
+}
+.profileBodyTitle h4 {
+  color: #146ab1;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+#personalSpace {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.videosAndPost {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+.videoTitle {
+  min-height: 2em;
+}
+#photosAndAlbums {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 1em;
+}
+
+#photos {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.image {
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+.albumLink {
+  color: #5f7e9a;
+  cursor: pointer;
+}

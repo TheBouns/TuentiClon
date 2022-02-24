@@ -1,3 +1,17 @@
-h1,h2,h3,a,p,div,input,li,ul{
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+div,
+input,
+li,
+ul,
+ol {
   margin: 0;
+  padding: 0;
+}
+ol {
+  list-style-type: none;
 }

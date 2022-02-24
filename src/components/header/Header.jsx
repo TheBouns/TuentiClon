@@ -25,7 +25,7 @@ const Header = () => {
           Upload Photos <ImArrowUp />
         </button>
       </div>
-      <p className="headerMyAccount">My account</p>
+      <p className="headerMyAccount">Logout</p>
     </nav>
   );
 };

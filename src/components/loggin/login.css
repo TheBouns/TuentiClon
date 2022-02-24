@@ -1,98 +1,92 @@
-.logginContainer{
-    background-color: #00acee;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+.logginContainer {
+  background-color: #6ea8d8;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.accesData{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0.5em;
+.accesData {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5em;
 }
-form{
-    width: em;
-    display: flex;
-    flex-direction: row;
-    gap: 0.5em;
+form {
+  width: em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
 }
-.formLeft{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-width: 50%;
+.formLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
 }
-.formRight{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-width: 50%;
+.formRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
 }
-.inputName{
-    height: 2em;
-
+.inputName {
+  height: 2em;
 }
-.welcomeContainer{
-    margin-top: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 70vh;
-    color: white;
+.welcomeContainer {
+  margin-top: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70vh;
+  color: white;
 }
-.logoWelcome{
-    width: 50%;
-    height: 100%;
-    
+.logoWelcome {
+  width: 50%;
+  height: 100%;
 }
-.iconsInfo{
-    width: 50%;
-    height: 100%;
+.iconsInfo {
+  width: 50%;
+  height: 100%;
 }
-.imageLogo{
-    background-image: url("https://res.cloudinary.com/ducxt7zb3/image/upload/v1645532143/tuentiTransparente_tozqdb.png");
-    width: 100%;
-    height: 50%;
-    background-size: contain;
+.imageLogo {
+  background-image: url("https://res.cloudinary.com/ducxt7zb3/image/upload/v1645532143/tuentiTransparente_tozqdb.png");
+  width: 100%;
+  height: 50%;
+  background-size: contain;
 }
 
-.imageText{
-    
-    width: 85%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+.imageText {
+  width: 85%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
-.imageText h2{
-    align-self: flex-end;
+.imageText h2 {
+  align-self: flex-end;
 }
-.imageText p{
-    width: 70%;
-    align-self: flex-end;
+.imageText p {
+  width: 70%;
+  align-self: flex-end;
 }
-.iconsInfo{
-    display: flex;
+.iconsInfo {
+  display: flex;
 }
-.icon{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    font-size: 4em;
-    width: 10%;
-    color: white;
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: 4em;
+  width: 10%;
+  color: white;
 }
-.description{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
+.description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
-.white{
-    color: white;
+.white {
+  color: white;
 }
-
-    
-
