@@ -1,8 +1,65 @@
-.headerContainer{
-    width: 100%;
-    border: solid black 1px;
-    height: 3em;
+.headerContainer {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  background-color: #00acee;
 }
-img{
-    width: 10%;
+.headerMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  gap: 2em;
+}
+.headerMyAccount {
+  width: 20%;
+  text-align: left;
+}
+.headerSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+.headerSearch input {
+  border: 0;
+  height: 2em;
+  width: 90%;
+}
+.headerSearch input:focus {
+  outline: none;
+}
+.glass {
+  color: #e9bb8b;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
+  width: 10%;
+  padding: 0;
+  height: 2em;
+}
+.upload {
+  color: white;
+  background-color: #346890;
+  border: none;
+  border-radius: 0.5em;
+  height: 2em;
+}
+.headerMyAccount:hover {
+  cursor: pointer;
+}
+img {
+  width: 10%;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
