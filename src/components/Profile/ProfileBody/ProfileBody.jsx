@@ -75,7 +75,7 @@ const ProfileBody = () => {
       </div>
       <div id="profilePost">
         <span className="profileBodyTitle">
-          <h4>My Dashborad</h4>
+          <h4>My Dashboard</h4>
         </span>
         <div className="comments">
           <span className="commentsInfo">
