@@ -1,0 +1,22 @@
+#formContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    border: solid 1px black;
+    background-color: #6ea8d8;;
+}
+.formImage{
+    width: 30%;
+}
+.formRegister{
+    justify-self: flex;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.formRegister input,select,button{
+    height: 2em;
+}

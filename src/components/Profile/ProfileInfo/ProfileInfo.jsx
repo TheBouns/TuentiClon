@@ -1,5 +1,19 @@
+import { profile } from "../../../features/auth/authSlice";
+import { useDispatch,useSelector } from "react-redux";
 import "./ProfileInfo.css";
+import { BsDisplay } from "react-icons/bs";
+import { useEffect } from "react";
 const ProfileInfo = () => {
+  const {userData} = useSelector((state)=> state.auth);
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+   dispatch(profile());
+  },[])
+  console.log(userData)
+
+
+  
   return (
     <div id="infoContainer">
       <div className="imgContainer">
@@ -22,6 +36,7 @@ const ProfileInfo = () => {
           <div id="information">
             <span className="titleAnswer">
               <ol>
+                <li>Name</li>
                 <li>Sex</li>
                 <li>Birthday</li>
                 <li>Age</li>
@@ -34,12 +49,12 @@ const ProfileInfo = () => {
             </span>
             <span className="answer">
               <ol>
-                <li>Yes,please</li>
-                <li>23/08/1990</li>
-                <li>32</li>
+                <li>{userData.name}</li>
+                <li>{userData.sex? userData.sex : ":D"}</li>
+                <li>{userData.birthday}</li>
                 <li>Single</li>
                 <li>Whatever</li>
-                <li>Villareal</li>
+                <li></li>
                 <li>---</li>
                 <li>Xvideos.com</li>
               </ol>

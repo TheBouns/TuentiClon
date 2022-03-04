@@ -90,3 +90,6 @@ form {
 .white {
   color: white;
 }
+.hidden{
+  display: none;
+}

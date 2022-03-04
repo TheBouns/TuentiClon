@@ -1,22 +1,54 @@
 import {BsFillPersonFill} from 'react-icons/bs'
 import {MdPlace} from 'react-icons/md'
 import {ImMobile} from 'react-icons/im'
+import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../features/auth/authSlice'
+import { useNavigate } from 'react-router-dom'
 import './login.css'
+
+
 const Loggin = ()=>{
+    const [data, formData] = useState({
+        email:"",
+        password:"",
+    })
+    const {isError,isSucces,message} = useSelector((state)=> state.auth)
+    const {email,password} = data
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const onChange = (event)=>{
+        formData((prevState)=>({
+            ...prevState,
+            [event.target.name]:event.target.value
+        }))
+    }
+    
+    const submitInfo = async (event)=>{
+        event.preventDefault()
+        await localStorage.setItem("FormValues", JSON.stringify(data));
+        console.log("formdata",data);
+        await dispatch(login(data));
+        navigate("/tuenti/profile")        
+    }
     return (
         <div className="logginContainer">
             <div className='accesData'>
-                <form>
+                <form onSubmit={submitInfo}>
                     <div className='formLeft'>
                         <label>Email</label>
-                        <input className='inputName' type="text"/>
+                        <input className='inputName' type="text" name='email' value={email} onChange={onChange}/>
                         <label className='white'><input type="checkbox"/>Remember me</label>
+                        
                     </div>
                     <div className='formRight'>
                         <label >Password</label>
-                        <input className='inputName' type="text"/>
-                        <a className='white'>Forget Password?</a>
+                        <input className='inputName' type="text" name='password' value={password} onChange={onChange}/>
+                        <a href="_blank"className='white'>Forget Password?</a>
+                        
+                        
                     </div>
+                    <button className="hidden"type='submit'></button>
                 </form>
             </div>
             <div className='welcomeContainer'>
