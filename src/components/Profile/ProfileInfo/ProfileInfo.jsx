@@ -10,20 +10,20 @@ const ProfileInfo = () => {
   useEffect(()=>{
    dispatch(profile());
   },[])
-  let birth =  (string)=>{
-    let birth = "";
-    for(let i=0; i<=9; i++){
-      birth += string[i];
-    }
-    return  birth;
-  }
+   let birth =  (string)=>{
+     let birth = "";
+     for(let i=0; i<=9; i++){
+       birth += string[i];
+     }
+     return  birth;
+   }
 
-  let creation = (string)=>{
-    let date = "";
-    for(let i=0; i<=9; i++){
-      date += string[i];
-    }
-    return  date;
+   let creation = (string)=>{
+     let date = "";
+     for(let i=0; i<=9; i++){
+       date += string[i];
+     }
+     return  date;
   }
   
   
@@ -65,10 +65,10 @@ const ProfileInfo = () => {
               <ol>
                 <li>{userData.name}</li>
                 <li>{userData.sex? userData.sex : ":D"}</li>
-                <li>{birth(userData.birthday)}</li>
+                <li>{birth(userData.birthday)}</li> 
                 <li>{userData.age}</li>
                 <li>{userData.maritalSt}</li>
-                <li>{userData.interest}</li>
+                <li>{userData.interest? userData.interest : ""}</li>
                 <li>{userData.city}</li>
                 <li>{creation(userData.createdAt)}</li>
                 <li>Xvideos.com</li>

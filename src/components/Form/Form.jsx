@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {useDispatch} from 'react-redux';
 import { register } from '../../features/auth/authSlice';
+import { useNavigate } from 'react-router-dom';
 import './Form.css'
 const Form = () =>{
     const [formData,setFormData] = useState({
@@ -15,9 +16,11 @@ const Form = () =>{
         password:"",
         email:"",
         
+        
     })
     const {sex,birthday,age,maritalSt,interest,city,website,name,password,email} = formData;
     const dispatch = useDispatch();
+    const navigate = useNavigate()
     const onSubmit = (event)=>{
         setFormData((prevState)=>({
             ...prevState,
@@ -25,15 +28,18 @@ const Form = () =>{
         }))
     }
     const submitInfo = (event)=>{
+        
         event.preventDefault()
         console.log("formdata",formData);
         dispatch(register(formData))
+        navigate("/")
     }
     return(
         <div id="formContainer">
             <img className='formImage' src='https://res.cloudinary.com/ducxt7zb3/image/upload/v1645532143/tuentiTransparente_tozqdb.png'></img>
             
                 <form className='formRegister'onSubmit={submitInfo}>
+                    {/* <input type="file" multiple accept="image/jpg" value={profileImg} onChange={onSubmit}/> */}
                     <label>Name</label>
                     <input type="text" name="name" value={name} onChange={onSubmit}/>
                     <label>Sex</label>
