@@ -10,11 +10,25 @@ const ProfileInfo = () => {
   useEffect(()=>{
    dispatch(profile());
   },[])
-  console.log(userData)
+  let birth =  (string)=>{
+    let birth = "";
+    for(let i=0; i<=9; i++){
+      birth += string[i];
+    }
+    return  birth;
+  }
 
-
+  let creation = (string)=>{
+    let date = "";
+    for(let i=0; i<=9; i++){
+      date += string[i];
+    }
+    return  date;
+  }
+  
   
   return (
+   
     <div id="infoContainer">
       <div className="imgContainer">
         <img
@@ -40,8 +54,8 @@ const ProfileInfo = () => {
                 <li>Sex</li>
                 <li>Birthday</li>
                 <li>Age</li>
-                <li>Marital St.</li>
-                <li>Looking for</li>
+                <li>Condition</li>
+                <li>Search</li>
                 <li>City</li>
                 <li>Registration</li>
                 <li>Web</li>
@@ -51,11 +65,12 @@ const ProfileInfo = () => {
               <ol>
                 <li>{userData.name}</li>
                 <li>{userData.sex? userData.sex : ":D"}</li>
-                <li>{userData.birthday}</li>
-                <li>Single</li>
-                <li>Whatever</li>
-                <li></li>
-                <li>---</li>
+                <li>{birth(userData.birthday)}</li>
+                <li>{userData.age}</li>
+                <li>{userData.maritalSt}</li>
+                <li>{userData.interest}</li>
+                <li>{userData.city}</li>
+                <li>{creation(userData.createdAt)}</li>
                 <li>Xvideos.com</li>
               </ol>
             </span>
