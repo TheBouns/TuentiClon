@@ -31,11 +31,13 @@ const logout = async ()=>{
 
 const profile = async ()=>{
     const user = JSON.parse(localStorage.getItem("user"))
+    
     const res = await axios.get(API_URI+"/users/options/myprofile",{
         headers:{
             authorization: user?.token,
         }
     })
+    
    return res.data
 }
 

@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
+import Dashboard from "./Dasboard/Dashboard";
+import ModalPost from "./Dasboard/ModaPost/ModalPost";
+import { useState } from "react";
+
 import "./ProfileBody.css";
 const ProfileBody = () => {
+  const [show,setShow] = useState(false);
   const photos = [
     "https://res.cloudinary.com/ducxt7zb3/image/upload/v1645458097/american-football-g8d3b1aec4_1280_zcxyvr.jpg",
     "https://res.cloudinary.com/ducxt7zb3/image/upload/v1645457030/sports-ga86337d90_1920_z6zdtn.jpg",
@@ -43,13 +48,7 @@ const ProfileBody = () => {
       </div>
     );
   });
-  const comment = {
-    name: "Pepe",
-    surname: "Lerele",
-    date: "24/02/2022",
-    img: "https://res.cloudinary.com/ducxt7zb3/image/upload/v1645720753/Floyd-Morris-Remake-1024x879-1_syefe5.jpg",
-    comment: "Aporta o Aparta(L)",
-  };
+  
   return (
     <div id="profileBody">
       <div id="profileButtons">
@@ -60,7 +59,6 @@ const ProfileBody = () => {
       <div id="personalSpace">
         <span className="profileBodyTitle">
           <h4>Mi personal space</h4>
-          <h4>📰New post</h4>
         </span>
         <div className="videosAndPost">{video}</div>
       </div>
@@ -73,28 +71,12 @@ const ProfileBody = () => {
         <div id="photos">{image}</div>
         <p className="albumLink">Watch all({photos.length})</p>
       </div>
-      <div id="profilePost">
-        <span className="profileBodyTitle">
+      <span className="profileBodyTitle">
           <h4>My Dashboard</h4>
-        </span>
-        <div className="comments">
-          <span className="commentsInfo">
-            <img src={comment.img} />
-            <h4 className="userComment">
-              {comment.name}
-              {comment.surname}
-            </h4>
-            <h3 className="date">{comment.date}</h3>
-          </span>
-          <span className="commentBody">
-            <p>{comment.comment}</p>
-          </span>
-          <span className="like">
-            <button>👍</button>
-            <button>👎</button>
-          </span>
-        </div>
-      </div>
+          <h4 className="cursor" onClick={()=> setShow(true)}>📰New post</h4>
+      </span>
+      <Dashboard/>
+      <ModalPost onClose={()=> setShow(false)} show={show}/>
     </div>
   );
 };
