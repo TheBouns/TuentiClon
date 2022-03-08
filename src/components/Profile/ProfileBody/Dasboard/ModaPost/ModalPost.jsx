@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './ModalPost.css'
 import { useDispatch } from 'react-redux';
+import { create } from '../../../../../features/posts/postSlice';
 
 const ModalPost = (props)=>{
-    // if(!props.show) return null;
     const [formData, setData] = useState({
         title:"",
         description:"",
@@ -19,14 +19,15 @@ const ModalPost = (props)=>{
     const submitInfo = (event)=>{
         event.preventDefault()
         console.log("formdata",formData);
-        dispatch(register(formData))
+        dispatch(create(formData))
     }
+    if(!props.show) return null
     return (
         <div className='modalContainer'>
               <div className='modalForm'>
                 <form onSubmit={submitInfo}>
-                    <input type="text" value={title} onChange={onSubmit}>Title</input>
-                    <input type="text" value={description} onChange={onSubmit}>Description</input>
+                    <input type="text" name="title" value={title} onChange={onSubmit} placeholder="Title"/>
+                    <input type="text" name="description"value={description} onChange={onSubmit} placeholder="Description"/>
                     <button type='submit'>Send</button>
                 </form>
             </div>  

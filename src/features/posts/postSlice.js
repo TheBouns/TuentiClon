@@ -13,3 +13,16 @@ export const postsSlice = createSlice({
     initialState,
     reducers:{},
 })
+
+export const create = createAsyncThunk(
+    "post/create",
+    async (data)=>{
+        try {
+            return postService.create(data);
+        } catch (error) {
+            console.error(error)
+        }
+    }
+)
+
+export default postsSlice.reducer;
