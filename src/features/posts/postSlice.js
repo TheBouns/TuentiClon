@@ -25,4 +25,16 @@ export const create = createAsyncThunk(
     }
 )
 
+export const myPost = createAsyncThunk(
+    "post/myPost",
+    async(user)=>{
+        try {
+            return postService.myPost(user)
+        } catch (error) {
+            console.error(error)
+            
+        }
+    }
+)
+
 export default postsSlice.reducer;

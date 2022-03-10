@@ -9,8 +9,17 @@ const create = async(data)=>{
         },
     });
 }
+
+const myPosts = async (user)=>{
+    const res = await axios.get(API_URI+"/users/options/myprofile",{
+        headers:{
+            authorization: user?.token
+        }
+    })
+}
 const postService = {
     create,
+    myPosts
 }
 
 export default postService;
